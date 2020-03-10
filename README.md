@@ -1,8 +1,8 @@
 ## 1 Lambda 
 ##### 1.1.  What is the lambda?
 ##### 1.2.   Syntax/Scope.
-##### 1.3. Method Reference.
-##### 1.4. Functional Interface.
+##### 1.3. Functional Interface.
+##### 1.4. Method Reference.
 
 ## 2 Functional Programming Technique
 **TBD**
@@ -79,5 +79,30 @@ One of the main purposes of lambdas is use in parallel computing – which means
 
 The “effectively final” paradigm helps a lot here, but not in every case. Lambdas can't change a value of an object from enclosing scope. But in the case of mutable object variables, a state could be changed inside lambda expressions.
 
-## 1.3. Method Reference
+```
+int portNumber = 1337;
+Runnable r = () -> System.out.println(portNumber);
+portNumber = 31337;
+```
 
+The above code will cause a compilation error “local variables referenced from a lambda expression must be final or effectively final.”
+
+## 1.3. Functional Interface
+
+A functional interface is defined as an interface with exactly one abstract method. This even applies to interfaces that were created with previous versions of Java.
+
+Java 8 comes with several new functional interfaces in the package, java.util.function.
+
+- `Function<T,R>` - takes an object of type T and returns R.
+- `Supplier<T>` - just returns an object of type T.
+- `Predicate<T>` - returns a boolean value based on input of type T.
+- `Consumer<T>` - performs an action with given object of type T.
+- `BiFunction` - like Function but with two parameters.
+- `BiConsumer` - like Consumer but with two parameters.
+
+It also comes with several corresponding interfaces for primitive types, such as:
+
+- `IntConsumer`
+- `IntFunction<R>`
+- `IntPredicate`
+- `IntSupplier`
