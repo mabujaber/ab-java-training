@@ -1,8 +1,8 @@
 ## 1 Lambda 
 ##### 1.1.  What is the lambda?
-##### 1.2.   Syntax/Scope.
-##### 1.3. Functional Interface.
-##### 1.4. Method Reference.
+##### 1.2.  Syntax/Scope
+##### 1.3.  Functional Interface
+##### 1.4.  Method Reference
 
 ## 2 Functional Programming
 ##### 2.1 Pure Function
@@ -21,9 +21,9 @@
 ##### 4.3.  Multiple Defaults.
 
 ## 5 Streams
-##### 5.1.   What is Streams?
-##### 5.2.   Generating Streams.
-##### 5.3.   For Each/Peek/Limit/Sort.
+##### 5.1.  What is Streams?
+##### 5.2.  Generating Streams.
+##### 5.3.  For Each/Peek/Limit/Sort.
 ##### 5.4.  Map/Filter/Reduce
 ##### 5.5.  Parallel Stream (Default implementation).
 ##### 5.6.  Collectors and Statistics.
