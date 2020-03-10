@@ -2,6 +2,8 @@ package ab.training.lambda;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
 
 public class Apple {
     private String farmerName;
@@ -39,12 +41,16 @@ public class Apple {
         this.farmerName = farmerName;
     }
 
+    @Override
     public String toString() {
         return "Apple{" +
-                "color='" + color + '\'' +
+                "farmerName='" + farmerName + '\'' +
                 ", weight=" + weight +
+                ", color='" + color + '\'' +
                 '}';
     }
+
+
 
     public static List<Apple> createApples() {
 
