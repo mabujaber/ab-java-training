@@ -1,19 +1,22 @@
-## 1 Lambda $\Lambda$
+## 1 Lambda 
 ##### - What is the lambda?
 ##### - Syntax
 ##### - Scope
 ##### - Method Reference
 ##### - Functional Interface
 
-## 2 Optional
+## 2 Functional Programming Technique
+**TBD**
+
+## 3 Optional
 ##### - What is Optional and Why to use it ?
 
-## 3 Default Method
+## 4 Default Method
 ##### - What is the Default Method ?
 ##### - Default and Functional.
 ##### - Multiple Defaults.
 
-## 4 Streams
+## 5 Streams
 ##### - What is Streams?
 ##### - Generating Streams
 ##### - For Each/Peek/Limit/Sort
@@ -25,5 +28,3 @@
 ##### - Statistics
 ##### - Grouping and Partitioning
 
-## 5 Functional Programming Technique
-**TBD**
