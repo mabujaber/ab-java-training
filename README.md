@@ -79,3 +79,5 @@ One of the main purposes of lambdas is use in parallel computing – which means
 
 The “effectively final” paradigm helps a lot here, but not in every case. Lambdas can't change a value of an object from enclosing scope. But in the case of mutable object variables, a state could be changed inside lambda expressions.
 
+## 1.3. Method Reference
+
