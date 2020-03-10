@@ -5,14 +5,18 @@
 ##### 1.4. Method Reference.
 
 ## 2 Functional Programming Technique
-**TBD**
+##### 2.1 Pure Function
+##### 2.2 Partial Function/Partial Applied Function
+##### 2.3 Currying 
+##### 2.4 Composition
+##### 2.5 Closure
 
 ## 3 Optional
 ##### 3.1.  What is Optional and Why to use it ?
 ##### 3.2.  How to use it and use-cases.
 
 ## 4 Default Method
-##### 4.1.   What is the Default Method ?
+##### 4.1.  What is the Default Method ?
 ##### 4.2.  Default and Functional.
 ##### 4.3.  Multiple Defaults.
 
@@ -53,7 +57,7 @@ paramters -> body
 str -> System.out.println(str)
 (String s1, String s2) -> { return s2.length() - s1.length(); }
 (s1, s2) -> s2.length() - s1.length()
-``` 
+```
 
 **Scope**
 Accessing a non-final variable inside lambda expressions will cause the compile-time error. But it doesn’t mean that you should mark every target variable as final.
@@ -91,7 +95,7 @@ The above code will cause a compilation error “local variables referenced from
 
 A functional interface is defined as an interface with exactly one abstract method. This even applies to interfaces that were created with previous versions of Java.
 
-Java 8 comes with several new functional interfaces in the package, java.util.function.
+Java 8 comes with several new functional interfaces in the package, `java.util.function.`
 
 - `Function<T,R>` - takes an object of type T and returns R.
 - `Supplier<T>` - just returns an object of type T.
@@ -106,3 +110,21 @@ It also comes with several corresponding interfaces for primitive types, such as
 - `IntFunction<R>`
 - `IntPredicate`
 - `IntSupplier`
+
+## 1.3. Method Reference 
+
+- Static methods.
+- Instance methods.
+- Methods on particular instances.
+- Constructors (ie. Object::new) 
+
+```
+    Predicate<String> predicate = String::isEmpty;
+
+```
+This equivalent to 
+```
+    Predicate<String> predicate = str -> str.isEmpty();
+```
+
+Let's do some code

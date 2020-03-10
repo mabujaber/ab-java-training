@@ -1,0 +1,1 @@
+The structure of the [Person.java](https://docs.oracle.com/javase/tutorial/displayCode.html?code=https://docs.oracle.com/javase/tutorial/java/javaOO/examples/Person.java) class can be down loaded from here
