@@ -4,9 +4,9 @@
 ##### 1.3. Functional Interface.
 ##### 1.4. Method Reference.
 
-## 2 Functional Programming Technique
+## 2 Functional Programming
 ##### 2.1 Pure Function
-##### 2.2 Partial Function/Partial Applied Function
+##### 2.2 Partial Applied Function
 ##### 2.3 Currying 
 ##### 2.4 Composition
 ##### 2.5 Closure
@@ -128,3 +128,6 @@ This equivalent to
 ```
 
 Let's do some code
+
+
+## 2 Functional Programming 
