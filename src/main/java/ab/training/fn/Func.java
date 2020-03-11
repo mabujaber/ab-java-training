@@ -1,9 +1,6 @@
 package ab.training.fn;
 
-import java.util.function.BiFunction;
-import java.util.function.BinaryOperator;
-import java.util.function.DoubleUnaryOperator;
-import java.util.function.Function;
+import java.util.function.*;
 
 public class Func {
 
@@ -26,8 +23,22 @@ public class Func {
         DoubleUnaryOperator convertCtoF = curriedConverter(9.0/5, 32);
         System.out.println(convertCtoF.applyAsDouble(24));
 
+        //Prediction composition
+        Predicate<String> startsWithA = (text) -> text.startsWith("A");
+        Predicate<String> endsWithX   = (text) -> text.endsWith("x");
 
+        Predicate<String> composed = startsWithA.and(endsWithX);
+        System.out.println(composed.test("A hardworking person must relax"));
 
+        // Function composition
+        Function<Integer, Integer> multiply = (value) -> value * 2;
+        Function<Integer, Integer> add      = (value) -> value + 3;
+
+        Function<Integer, Integer> addThenMultiply = multiply.compose(add);
+        System.out.println(addThenMultiply.apply(3));
+        //then apply
+        Function<Integer, Integer> multiplyThenAdd = multiply.andThen(add);
+        System.out.println(multiplyThenAdd.apply(3));
 
 
     }

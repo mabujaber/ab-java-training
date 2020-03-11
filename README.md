@@ -11,7 +11,6 @@
 ##### 2.4 Partial Applied Function
 ##### 2.5 Currying 
 ##### 2.6 Composition
-##### 2.7 Closure
 
 ## 3 Optional
 ##### 3.1.  What is Optional and Why to use it ?
@@ -201,10 +200,8 @@ In other words, its a technique of simplifying a multi-valued argument function 
 
 
 ## 2.6 Composition
-You can compose functions. In mathematics, function composition is the application of one function to the result of another to produce a third function
+s a technique to combine multiple functions into a single function which uses the combined functions internally.
 
-## 2.7 Closure
-The closure is an inner function which can access variables of parent function's, even after the parent function has executed.
 
 
 
