@@ -6,11 +6,12 @@
 
 ## 2 Functional Programming
 ##### 2.1 Pure Function
-##### 2.2 Higher Order Function
-##### 2.3 Partial Applied Function
-##### 2.4 Currying 
-##### 2.5 Composition
-##### 2.6 Closure
+##### 2.2 Partial Function
+##### 2.3 Higher Order Function
+##### 2.4 Partial Applied Function
+##### 2.5 Currying 
+##### 2.6 Composition
+##### 2.7 Closure
 
 ## 3 Optional
 ##### 3.1.  What is Optional and Why to use it ?
@@ -181,24 +182,28 @@ Let's do some code
 - Triggering any external process
 - Calling any other functions with side-effects
 
+## 2.2 Partial Function
 
-## 2.2 Higher Order Function
+is a pure function but there are cases become impure 
+
+## 2.3 Higher Order Function
 The function takes one or more functions as parameters.
+Or
 The function returns another function as result.
 
-## 2.3 Partial Function
+## 2.4 Partial Function
 is the function in which argument is partially applied that can be reuse and we can apply remaining argument to get final result.
 
 
-## 2.4 Currying Function
+## 2.5 Currying Function
 Function Currying is a concept of breaking a function with many arguments into many functions with single argument in such a way, that the output is same. 
 In other words, its a technique of simplifying a multi-valued argument function into single-valued argument multi-functions.
 
 
-## 2.5 Composition
+## 2.6 Composition
 You can compose functions. In mathematics, function composition is the application of one function to the result of another to produce a third function
 
-## 2.6 Closure
+## 2.7 Closure
 The closure is an inner function which can access variables of parent function's, even after the parent function has executed.
 
 
