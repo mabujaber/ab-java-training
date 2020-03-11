@@ -108,6 +108,8 @@ Java 8 comes with several new functional interfaces in the package, `java.util.f
 - `Consumer<T>` - performs an action with given object of type T.
 - `BiFunction` - like Function but with two parameters.
 - `BiConsumer` - like Consumer but with two parameters.
+- `UnaryOperator` - takes one parameter and return a parameter both are same type
+- `BinaryOperator` - takes two parameters and return a parameter both are same type
 
 It also comes with several corresponding interfaces for primitive types, such as:
 
