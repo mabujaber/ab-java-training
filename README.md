@@ -37,7 +37,7 @@
 
 ## 1 Lambda
 ## 1.1. What is Lambda?
-an anonymous function is a function definition that is not bound to an identifier
+A lambda expression is like syntactic sugar for an anonymous function
 
 ## 1.2. Syntax/Scope 
 
