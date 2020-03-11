@@ -33,7 +33,6 @@
 ##### 5.6.3.    Statistics.
 ##### 5.7.  Grouping and Partitioning.
 
-<br/>
 
 
 ## 1 Lambda
