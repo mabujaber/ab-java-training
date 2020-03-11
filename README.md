@@ -6,10 +6,11 @@
 
 ## 2 Functional Programming
 ##### 2.1 Pure Function
-##### 2.2 Partial Applied Function
-##### 2.3 Currying 
-##### 2.4 Composition
-##### 2.5 Closure
+##### 2.2 Higher Order Function
+##### 2.3 Partial Applied Function
+##### 2.4 Currying 
+##### 2.5 Composition
+##### 2.6 Closure
 
 ## 3 Optional
 ##### 3.1.  What is Optional and Why to use it ?
@@ -131,3 +132,74 @@ Let's do some code
 
 
 ## 2 Functional Programming 
+
+**Functional programming is** a programming paradigm — a style of building the structure and elements of computer programs — that treats computation as the evaluation of mathematical functions and avoids changing-state and mutable data
+
+<table>
+    <tr>
+        <th>Functional Programming</th>
+        <th>Object Oriented Programming</th>
+    </tr>
+    <tr>
+        <td>Follows Declarative Programming based Model.
+        </td>
+        <td>Follows Imperative Programming Model.</td>
+    </tr>
+    <tr>
+        <td>Efficient Parallel Programming.</td>
+        <td>Hard to make Parallel Programming.</td>
+    </tr>
+    <tr>
+         <td>Its functions have no-side effects.</td>
+         <td>Method can produce many side effects.</td>
+    </tr>
+    <tr>
+        <td>Flow Control is performed using function calls & function calls with recursion.</td>
+        <td>Flow control process is conducted using loops and conditional statements.</td>
+    </tr>
+    <tr>
+        <td>Execution order of statements is not very important.</td>
+        <td>Execution order of statements is important.</td>
+    </tr>
+    <tr>
+    <td>Supports both "Abstraction over Data" and "Abstraction over Behavior".</td>
+    <td>Supports only "Abstraction over Data".</td>
+    </tr>    
+</table>
+
+## 2.1 Pure Function
+
+- It returns the same result if given the same arguments
+- It does not cause any observable side effects
+
+**wait what is side-effect?**
+- Modifying any external variable or object property (e.g., a global variable, or a variable in the parent function scope chain)
+- Logging to the console
+- Writing to the screen
+- Writing to a file
+- Writing to the network
+- Triggering any external process
+- Calling any other functions with side-effects
+
+
+## 2.2 Higher Order Function
+The function takes one or more functions as parameters.
+The function returns another function as result.
+
+## 2.3 Partial Function
+is the function in which argument is partially applied that can be reuse and we can apply remaining argument to get final result.
+
+
+## 2.4 Currying Function
+Function Currying is a concept of breaking a function with many arguments into many functions with single argument in such a way, that the output is same. 
+In other words, its a technique of simplifying a multi-valued argument function into single-valued argument multi-functions.
+
+
+## 2.5 Composition
+You can compose functions. In mathematics, function composition is the application of one function to the result of another to produce a third function
+
+## 2.6 Closure
+The closure is an inner function which can access variables of parent function's, even after the parent function has executed.
+
+
+
