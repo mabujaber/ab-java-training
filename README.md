@@ -106,7 +106,7 @@ Java 8 comes with several new functional interfaces in the package, `java.util.f
 - `Supplier<T>` - just returns an object of type T.
 - `Predicate<T>` - returns a boolean value based on input of type T.
 - `Consumer<T>` - performs an action with given object of type T.
-- `BiFunction` - like Function but with two parameters.
+- `BiFunction<T,>` - like Function but with two parameters.
 - `BiConsumer` - like Consumer but with two parameters.
 - `UnaryOperator` - takes one parameter and return a parameter both are same type
 - `BinaryOperator` - takes two parameters and return a parameter both are same type
@@ -178,7 +178,7 @@ Let's do some code
 - It returns the same result if given the same arguments
 - It does not cause any observable side effects
 
-**wait what is side-effect?**
+**wait what is side-effects?**
 - Modifying any external variable or object property (e.g., a global variable, or a variable in the parent function scope chain)
 - Logging to the console
 - Writing to the screen

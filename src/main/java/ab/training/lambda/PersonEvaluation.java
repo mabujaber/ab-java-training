@@ -12,6 +12,16 @@ public class PersonEvaluation {
 
         List<Person> roster = Person.createRoster();
 
+
+
+
+        printPersonsWithPredicate(roster,
+               (person -> person.gender.equals("female") &&
+                       person.getAge() > 25) );
+
+
+
+
         for (Person p : roster) {
             p.printPerson();
         }
