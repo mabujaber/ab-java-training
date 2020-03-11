@@ -186,16 +186,15 @@ Let's do some code
 - Calling any other functions with side-effects
 
 ## 2.2 Partial Function
-
-is a pure function but there are cases become impure 
+Is a pure function but there are cases become impure 
 
 ## 2.3 Higher Order Function
 The function takes one or more functions as parameters.
 Or
 The function returns another function as result.
 
-## 2.4 Partial Function
-is the function in which argument is partially applied that can be reuse and we can apply remaining argument to get final result.
+## 2.4 Partial Applied Function
+Is the function in which argument is partially applied that can be reuse and we can apply remaining argument to get final result.
 
 
 ## 2.5 Currying Function
@@ -204,7 +203,7 @@ In other words, its a technique of simplifying a multi-valued argument function 
 
 
 ## 2.6 Composition
-s a technique to combine multiple functions into a single function which uses the combined functions internally.
+Is a technique to combine multiple functions into a single function which uses the combined functions internally.
 
 
 
