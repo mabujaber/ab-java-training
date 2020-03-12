@@ -28,6 +28,7 @@ public class Func {
         Predicate<String> endsWithX   = (text) -> text.endsWith("x");
 
         Predicate<String> composed = startsWithA.and(endsWithX);
+        Predicate<String> composed2 = startsWithA.or(endsWithX);
         System.out.println(composed.test("A hardworking person must relax"));
 
         // Function composition
@@ -40,12 +41,12 @@ public class Func {
         Function<Integer, Integer> multiplyThenAdd = multiply.andThen(add);
         System.out.println(multiplyThenAdd.apply(3));
 
-
     }
 
     public static void higherOrderFunc(){
         Function<Integer, Function<Integer,Integer>> higherOrder =
                 functionAInput ->  functionBInput -> functionBInput * functionAInput;
+
         Function<Integer, Integer> resultHigher = higherOrder.apply(10);
         System.out.println("Higher Order Function result: "+ resultHigher.apply(3)); //30
     }
