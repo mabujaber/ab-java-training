@@ -16,10 +16,7 @@
 ##### 3.1.  What is Optional and Why to use it ?
 ##### 3.2.  How to use it and use-cases.
 
-## 4 Default Method
-##### 4.1.  What is the Default Method ?
-##### 4.2.  Default and Functional.
-##### 4.3.  Multiple Defaults.
+## 4 Static and Default
 
 ## 5 Streams
 ##### 5.1.  What is Streams?
@@ -206,6 +203,12 @@ transformation of a function with multiple arguments into a chain of single-argu
 ## 2.6 Composition
 Is a technique to combine multiple functions into a single function which uses the combined functions internally.
 
+## 3 Optional
+
+Optional came to help avoid the null pointer exception
+
+ 
+ 
 
 
 
