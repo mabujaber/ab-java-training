@@ -207,8 +207,36 @@ Is a technique to combine multiple functions into a single function which uses t
 
 Optional came to help avoid the null pointer exception
 
+ ## 4 Static and Default
  
+ Default method came to help in backward compatibility when Java introduced Streams
  
+ if you notice all the collection framework has this method, this used default
+ 
+ ```
+default public Stream stream() {
+ 	return StreamSupport.stream(spliterator());
+ }
+```
+
+Also, Default method used in multiple Functional interface
+
+```
+@FunctionalInterface
+interface Predicate<T>{
+    boolean test(T t);
+    
+    default Predicate<T> or(Predicate<? super T> other) {
+         Objects.requireNonNull(other);
+         return (t) -> test(t) || other.test(t);
+    }
+
+...etc
+} 
+```
 
 
+what if we need to use this by our self
+
+let's do it
 
