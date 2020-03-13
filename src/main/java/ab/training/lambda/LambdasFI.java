@@ -28,8 +28,6 @@ public class LambdasFI {
         BinaryOperator<String> binaryOperator
                 = (str1, str2) -> str2 + str1;
 
-
-
     }
 
 

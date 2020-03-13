@@ -196,12 +196,11 @@ Or
 The function returns another function as result.
 
 ## 2.4 Partial Applied Function
-Is the function in which argument is partially applied that can be reuse and we can apply remaining argument to get final result.
+a function that was called with a fewer number of arguments.
 
 
 ## 2.5 Currying Function
-Function Currying is a concept of breaking a function with many arguments into many functions with single argument in such a way, that the output is same. 
-In other words, its a technique of simplifying a multi-valued argument function into single-valued argument multi-functions.
+transformation of a function with multiple arguments into a chain of single-argument functions
 
 
 ## 2.6 Composition
