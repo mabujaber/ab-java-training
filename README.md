@@ -21,8 +21,8 @@
 ## 5 Streams
 ##### 5.1.  What is Streams?
 ##### 5.2.  Generating Streams.
-##### 5.3.  For Each/Peek/Limit/Sort.
-##### 5.4.  Map/Filter/Reduce
+##### 5.3.  Intermediate operations.
+##### 5.4.  Terminal operations.
 ##### 5.5.  Parallel Stream (Default implementation).
 ##### 5.6.  Collectors and Statistics.
 ##### 5.6.1.    Simple Collectors.
@@ -240,3 +240,123 @@ what if we need to use this by our self
 
 let's do it
 
+
+I Java 8 also allowed to add static method in Interface
+
+```
+public static<T> Stream<T> of(T... values) {
+     return Arrays.stream(values);
+} 
+```
+
+## 5 Streams
+## 5.1.  What is Streams?
+
+`Stream` interface is located in the `java.util.stream` package
+
+It represents a sequence of objects somewhat like List. However, unlike the List, it supports parallel execution.
+
+## 5.2.  Generating Streams.
+
+The most common way to create a `Stream` by calling these two method exist in `Collection` framework
+
+- `stream()` Returns a sequential Stream with the collection as its source.
+- `parallelStream()` Returns a possibly parallel Stream with the collection as its source.
+
+you can generate an infinite stream by calling static method `generate` and `iterate`
+
+```
+Stream.generate(() -> new Apple());
+```
+
+This similar to infinite loop you should you use with caution
+
+another example of generating infinite random number 
+
+```
+Stream.generate(() -> Math.random());
+``` 
+
+However, the `java.util.Random` class does this for you with the following new methods: `ints()`, `longs()`, and `doubles()`. Each of those methods is overloaded with definitions similar to the following:
+
+- `ints()`: An infinite Stream of random integers.
+- `ints(int n, int m)`: An infinite Stream of random integers from n (inclusive) to m (exclusive).
+- `ints(long size)`: A Stream of given size of random integers.
+- `ints(long size, int n, int m)`: A Stream of given size of random integers with given bounds.
+
+The `iterate` method is similar to `generate` except it takes an initial value and a Function that modifies that value. For example, you can iterate over the Integers using the following code:
+
+```
+Stream.iterate(1, i -> i+1)
+     .forEach(System.out::print);
+```
+
+This would print out “1234…” continuously until you stop the program.
+
+HINTS: we can always limit the infinite stream by using `filter` and `limit`
+
+**Ranges**
+
+Similar to functional interface, Stream has concrete type for all the primitive types
+
+fo example we can generate a range from 1 to 10 by doing the below code
+
+```
+IntStream.range(1, 11)
+         .forEach(System.out::println);
+```
+
+Similar to `IntStream`, `LongStream` has range method
+
+Also, There is another generator for range which include the end which is `rangeClosed`
+
+**Streaming anything**
+ ```
+Stream<Integer> s = Stream.of(1, 2, 3);
+Stream<Object> s2 = Arrays.stream(array);
+```
+
+What is the different between the collection and streams? 
+
+Both the existing Java notion of collections and the new notion of streams provide interfaces to data structures representing a sequenced set of values of the element type
+So, What is the difference? 
+
+- Collection is eager constructed while stream lazy constructed.
+- Collection can be traversed n number while a stream can be traversed once then will be marked as consumed unlike the collection.
+- Collection using external iteration while a stream using internal.
+- Collection doesn't support parallel while a stream does.
+
+now let's talk about stream operations.
+
+## 5.3.  Intermediate operations.
+Intermediate operations such as `filter` or `sorted` return another stream as the return type. This allows the operations to be connected to form a query. What’s important is that intermediate operations don’t perform any processing until a termi- nal operation is invoked on the stream pipeline—they’re lazy.
+
+list of intermediate operations
+- `filter` take a `Predicate<T>` as an argument and return `Stream<T>`
+- `map` take a `Function<T,R>` as an argument and return `Stream<R>`
+- `limit` take a number and return the number of elements passed to the method as  `Stream<T>`
+- `sorted` take a `Comparator<T>` as an argument and return `Stream<T>`
+- `distinct` doesn't take any arguments and return `Stream<T>`
+...etc
+
+## 5.4. Terminal operations.
+Terminal operations produce a result from a stream pipeline. A result is any non- stream value such as a `List`, an `Integer`, or even `void`.
+
+list of terminal operations
+- `forEach` take a `Consumer<T>` as an argument and return nothing.
+- `count` doesn't have any arguments and return `double`
+- `collect` take a `Collector<? super T,A,R>` and return object
+...etc
+
+Summarize the working with `Stream` 
+- A data source (such as a collection) to perform a query on
+- A chain of intermediate operations that form a stream pipeline
+- A terminal operation that executes the stream pipeline and produces a result
+
+The remain content of the streams will be covered by code
+
+## 5.6.  Collectors and Statistics.
+## 5.6.1.    Simple Collectors.
+## 5.6.2.    Joining.
+## 5.6.3.    Statistics.
+## 5.7.  Grouping and Partitioning.

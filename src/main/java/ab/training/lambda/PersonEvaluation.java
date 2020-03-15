@@ -144,6 +144,16 @@ public class PersonEvaluation {
 
         System.out.println();
 
+
+        //This is the ultimate way to do it in streams
+        Person.createRoster()
+                .stream()
+                .filter(p -> p.getGender() == Person.Sex.MALE
+                && p.getAge() >= 18
+                && p.getAge() <=25)
+                .map(p -> p.getEmailAddress())
+                .forEach(System.out::println);
+
     }
 
 
